@@ -1,4 +1,4 @@
-package com.devsuperior.dsmovie.dto;
+package com.eucalipto.cadastro.dto;
 
 public class ScoreDTO {
 	private Long movieId;

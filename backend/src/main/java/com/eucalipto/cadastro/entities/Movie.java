@@ -1,33 +1,39 @@
-package com.devsuperior.dsmovie.dto;
+package com.eucalipto.cadastro.entities;
 
-import com.devsuperior.dsmovie.entities.Movie;
+import java.util.HashSet;
+import java.util.Set;
 
-public class MovieDTO {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "tb_movie")
+public class Movie {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
 	private Double score;
 	private Integer count;
 	private String image;
 
-	public MovieDTO() {
+	@OneToMany(mappedBy = "id.movie")
+	private Set<Score> scores = new HashSet<>();
 
+	public Movie() {
 	}
 
-	public MovieDTO(Long id, String title, Double score, Integer count, String image) {
+	public Movie(Long id, String title, Double score, Integer count, String image) {
 		this.id = id;
 		this.title = title;
 		this.score = score;
 		this.count = count;
 		this.image = image;
-	}
-	
-	public MovieDTO(Movie movie) {
-		id = movie.getId();
-		title = movie.getTitle();
-		score = movie.getScore();
-		count = movie.getCount();
-		image = movie.getImage();
 	}
 
 	public Long getId() {
@@ -69,15 +75,9 @@ public class MovieDTO {
 	public void setImage(String image) {
 		this.image = image;
 	}
-	
-	public void sacar() {
-		
+
+	public Set<Score> getScores() {
+		return scores;
 	}
-	public void sacar(String image) {
-		
-	}
-	
-	
-	
 
 }

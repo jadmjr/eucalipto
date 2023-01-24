@@ -1,4 +1,4 @@
-package com.devsuperior.dsmovie.config;
+package com.eucalipto.cadastro.config;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.devsuperior.dsmovie.entities;
+package com.eucalipto.cadastro.entities;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;

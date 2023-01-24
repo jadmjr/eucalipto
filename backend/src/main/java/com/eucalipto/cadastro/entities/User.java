@@ -1,4 +1,4 @@
-package com.devsuperior.dsmovie.entities;
+package com.eucalipto.cadastro.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

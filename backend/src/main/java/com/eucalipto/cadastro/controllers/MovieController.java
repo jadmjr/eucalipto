@@ -1,4 +1,4 @@
-package com.devsuperior.dsmovie.controllers;
+package com.eucalipto.cadastro.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsuperior.dsmovie.dto.MovieDTO;
-import com.devsuperior.dsmovie.services.MovieService;
+import com.eucalipto.cadastro.dto.MovieDTO;
+import com.eucalipto.cadastro.services.MovieService;
 
 @RestController
 @RequestMapping(value = "/movies")
