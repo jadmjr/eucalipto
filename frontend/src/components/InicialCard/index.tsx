@@ -5,6 +5,8 @@ import { Movie } from 'types/movies';
 import { BASE_URL } from 'utils/requests';
 import { validateEmail } from 'utils/validate';
 import './styles.css'
+import React from "react";
+import ReactGA from "react-ga";
 
 type Props = {
     movieId: String;
@@ -63,7 +65,7 @@ function IncialCard({ movieId }: Props) {
                         </select>
                     </div>
                     <div className="dsmovie-form-btn-container">
-                        <button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
+                        <button type="submit" className="btn btn-primary dsmovie-btn" onClick={()=>gaEventTracker('email')}>Salvar</button>
                     </div>
                 </form >
                 <Link to="/">
