@@ -1,12 +1,12 @@
-# Título do projeto
+# Eucalipto
 
-Um parágrafo da descrição do projeto vai aqui
+Projeto inicial Eucalipto
 
 ## 🚀 Começando
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
-
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
+mnv clean install
+yarn build 
+yarn start 
 
 ### 📋 Pré-requisitos
 
@@ -78,8 +78,8 @@ Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as vers�
 
 Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
+* **Julimar Junior** - *Trabalho Inicial* - [julimar](https://github.com/jadmjr)
+* **Thales Bequiman** - *Documentação* - [thales](https://github.com/oizus)
 
 Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
 
