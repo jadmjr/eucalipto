@@ -18,7 +18,8 @@ function FormCadastro() {
         <div className="eucalipto-form-container">
     
             <div className="eucalipto-card-bottom-container">
-                <h3>OI</h3>
+                <h3>Eucalipto Apostas</h3>
+                <img className="eucalipto-movie-card-image" src={"https://thumbs.gfycat.com/SmallDiscreteGnat-small.gif"} alt={"Koala Feliz"} />
                 <form className="eucalipto-form" >
                     <div className="form-group eucalipto-form-group">
                     
