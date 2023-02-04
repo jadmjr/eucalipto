@@ -8,12 +8,8 @@ import Form from 'pages/Form';
 import Navbar from "components/Navbar";
 import RegisterForm from "pages/RegisterForm";
 import Inicial from "pages/Inicial";
-import ReactGA from 'react-ga';
 import Cadastro from "pages/Cadastro";
 import Footer from "components/Footer";
-const TRACKING_ID = "G-8CFNCSK96H"; // OUR_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
   return (

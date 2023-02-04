@@ -1,5 +1,9 @@
 import {ReactComponent as GithubIcon} from 'assets/img/github.svg'
 import "./styles.css"
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-8CFNCSK96H"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function Navbar(){
     return(
