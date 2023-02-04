@@ -1,27 +1,27 @@
-import axios, { AxiosRequestConfig } from 'axios';
+/* import axios, { AxiosRequestConfig } from 'axios';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Movie } from 'types/movies';
 import { BASE_URL } from 'utils/requests';
-import { validateEmail } from 'utils/validate';
+import { validateEmail } from 'utils/validate'; */
 import './styles.css';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import 'react-phone-input-2/lib/style.css';
 
+/* 
 type Props = {
     movieId: String;
-}
+} */
 
 function FormCadastro() {
     return (
         <div className="eucalipto-form-container">
-            <img className="eucalipto-movie-card-image" />
+    
             <div className="eucalipto-card-bottom-container">
-                <h3></h3>
+                <h3>OI</h3>
                 <form className="eucalipto-form" >
                     <div className="form-group eucalipto-form-group">
-                    <img className="eucalipto-movie-card-image" src="https://i.pinimg.com/originals/2a/a4/d1/2aa4d1d533eb2b98a3fa7ae055d7a0c6.gif" />
+                    
                         <label htmlFor="fullName">Informe seu nome completo</label>
                         <input type="text" className="form-control" id="fullName" />
 
