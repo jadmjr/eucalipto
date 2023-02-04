@@ -3,6 +3,8 @@ package com.eucalipto.cadastro.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,29 +39,16 @@ public class PersonService {
 	}
 
 	@Transactional
-	public PersonDTO savePerson(PersonDTO dto) {
-		//Person person = repository.findByEmail(dto.getEmail());
-		 
-		Person person = new Person();
-		person.setEmail(dto.getEmail());
-		person.setDocumentNumber(dto.getDocumentNumber());
-		person.setEnableSmsEmail(dto.getEnableSmsEmail());
-		person.setEnableWhatsapp(dto.getEnableWhatsapp());
-		person.setFullName(dto.getFullName());
-		person.setHasAdvisor(dto.getHasAdvisor());
-		person.setHasAtorney(dto.getHasAtorney());
-		person.setPhoneNumber(dto.getPhoneNumber());
-		person.setUserName(dto.getUserName());
-		person = repository.save(person);
-
-		return new PersonDTO(person);
+	public ResponseEntity<Person> savePerson(Person person) {
+		repository.save(person);
+		return new ResponseEntity<>(person, HttpStatus.CREATED);
 	}
-	
+
 	@Transactional
 	public PersonDTO updatePerson(PersonDTO dto) {
-		
+
 		Person person = repository.findByEmail(dto.getEmail());
-		 
+
 		person = new Person();
 		person.setEmail(dto.getEmail());
 		person.setDocumentNumber(dto.getDocumentNumber());
