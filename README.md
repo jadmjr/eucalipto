@@ -8,6 +8,9 @@ Projeto inicial Eucalipto
 * java -jar cadastro-0.0.1-SNAPSHOT.jar;
 * yarn build; 
 * yarn start;
+* heroku git:remote -a eucalipto-cadastro
+* git subtree push --prefix backend heroku main
+
 
 ### 📋 Pré-requisitos
 
