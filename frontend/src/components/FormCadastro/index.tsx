@@ -4,7 +4,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Movie } from 'types/movies';
 import { BASE_URL } from 'utils/requests';
 import { validateEmail } from 'utils/validate';
-import './styles.css'
+import './styles.css';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+import 'react-phone-input-2/lib/style.css';
 
 type Props = {
     movieId: String;
@@ -12,32 +15,48 @@ type Props = {
 
 function FormCadastro() {
     return (
-        <div className="dsmovie-form-container">
-            <img className="dsmovie-movie-card-image" />
-            <div className="dsmovie-card-bottom-container">
+        <div className="eucalipto-form-container">
+            <img className="eucalipto-movie-card-image" />
+            <div className="eucalipto-card-bottom-container">
                 <h3></h3>
-                <form className="dsmovie-form" >
-                    <div className="form-group dsmovie-form-group">
+                <form className="eucalipto-form" >
+                    <div className="form-group eucalipto-form-group">
+                    <img className="eucalipto-movie-card-image" src="https://i.pinimg.com/originals/2a/a4/d1/2aa4d1d533eb2b98a3fa7ae055d7a0c6.gif" />
+                        <label htmlFor="fullName">Informe seu nome completo</label>
+                        <input type="text" className="form-control" id="fullName" />
+
+                        <label htmlFor="fullName">Escolha seu usuário</label>
+                        <input type="text" className="form-control" id="fullName" />
+
+
+                        <label htmlFor="phoneNumber">Informe seu telefone</label>
+                        <PhoneInput
+                            inputProps={{
+                                name: 'phoneNumber',
+                                required: true,
+                                autoFocus: true,
+                                placeholder: "informe seu telefone"
+
+
+
+                            }}
+                            country={'br'}
+                        />
                         <label htmlFor="email">Informe seu email</label>
                         <input type="email" className="form-control" id="email" />
+
+                        <br></br>
+
+                        <div className="form-control">
+                            <label htmlFor="email">Informe seu CPF</label>
+
+                        </div>
+
                     </div>
-                    <div className="form-group dsmovie-form-group">
-                        <label htmlFor="score">Informe sua avaliação</label>
-                        <select className="form-control" id="score">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <div className="dsmovie-form-btn-container">
-                        <button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
+                    <div className="eucalipto-form-btn-container">
+                        <button type="submit" className="btn btn-primary eucalipto-btn">Cadastrar</button>
                     </div>
                 </form >
-                <Link to="/">
-                    <button className="btn btn-primary dsmovie-btn mt-3">Cancelar</button>
-                </Link>
             </div >
         </div >
     );

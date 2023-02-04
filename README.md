@@ -2,15 +2,22 @@
 
 Projeto inicial Eucalipto
 
+- **Conectando Mundos++** ⭐  Filosofia e Inovação.
+<img alt="Pessoas construindo máquina" src="https://miro.medium.com/v2/resize:fit:828/1*L_QoAG863l8QvqxpNyBiqw.gif" align="center"/>
+
 ## 🚀 Começando
 
 * mvn clean install;
 * java -jar cadastro-0.0.1-SNAPSHOT.jar;
+* yarn install
 * yarn build; 
 * yarn start;
 * heroku git:remote -a eucalipto-cadastro
 * git subtree push --prefix backend heroku main
 
+## 🚀 Plugins
+* npm i react-phone-input-2
+* yarn add @react-br-forms/cpf-cnpj-mask
 
 ### 📋 Pré-requisitos
 

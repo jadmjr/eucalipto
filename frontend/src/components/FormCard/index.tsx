@@ -43,16 +43,16 @@ function FormCard({ movieId }: Props) {
         });
     }
     return (
-        <div className="dsmovie-form-container">
-            <img className="dsmovie-movie-card-image" src={movie?.image} alt={movie?.title} />
-            <div className="dsmovie-card-bottom-container">
+        <div className="eucalipto-form-container">
+            <img className="eucalipto-movie-card-image" src={movie?.image} alt={movie?.title} />
+            <div className="eucalipto-card-bottom-container">
                 <h3>{movie?.title}</h3>
-                <form className="dsmovie-form" onSubmit={handleSubmit}>
-                    <div className="form-group dsmovie-form-group">
+                <form className="eucalipto-form" onSubmit={handleSubmit}>
+                    <div className="form-group eucalipto-form-group">
                         <label htmlFor="email">Informe seu email</label>
                         <input type="email" className="form-control" id="email" />
                     </div>
-                    <div className="form-group dsmovie-form-group">
+                    <div className="form-group eucalipto-form-group">
                         <label htmlFor="score">Informe sua avaliação</label>
                         <select className="form-control" id="score">
                             <option>1</option>
@@ -62,12 +62,12 @@ function FormCard({ movieId }: Props) {
                             <option>5</option>
                         </select>
                     </div>
-                    <div className="dsmovie-form-btn-container">
-                        <button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
+                    <div className="eucalipto-form-btn-container">
+                        <button type="submit" className="btn btn-primary eucalipto-btn">Salvar</button>
                     </div>
                 </form >
                 <Link to="/">
-                    <button className="btn btn-primary dsmovie-btn mt-3">Cancelar</button>
+                    <button className="btn btn-primary eucalipto-btn mt-3">Cancelar</button>
                 </Link>
             </div >
         </div >

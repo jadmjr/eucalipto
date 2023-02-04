@@ -5,13 +5,14 @@ header {
     align-items: center;
 }
 
-.eucalipto-nav-content {
+.eucalipto-footer-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #fff;
 }
-.eucalipto-nav-content h1 {
+
+.eucalipto-footer-content h1 {
     font-size: 24px;
     margin: 0;
     font-weight: 700;

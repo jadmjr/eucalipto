@@ -1,11 +1,11 @@
 import {ReactComponent as GithubIcon} from 'assets/img/github.svg'
 import "./styles.css"
 
-function Navbar(){
+function Footer(){
     return(
         <header>
-        <nav className="container">
-          <div className="eucalipto-nav-content">
+        <footer className="container">
+          <div className="eucalipto-footer-content">
             <h1>Eucalipto</h1>
             <a href="https://github.com/jadmjr" target="_blank" rel="noreferrer">
               <div className="eucalipto-contact-container">
@@ -14,9 +14,9 @@ function Navbar(){
               </div>
             </a>
           </div>
-        </nav>
+        </footer>
       </header>
     )
 }
 
-export default Navbar;
+export default Footer;
