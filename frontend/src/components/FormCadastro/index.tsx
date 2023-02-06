@@ -1,13 +1,10 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Movie } from 'types/movies';
+import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from 'utils/requests';
-import { validateEmail } from 'utils/validate';
 import './styles.css';
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
-import { Person } from 'types/person';
+
 
 
 /* 
@@ -18,7 +15,6 @@ type Props = {
 function FormCadastro() {
 
     const navigate = useNavigate();
-    const [person, setPerson] = useState<Person>();
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();

@@ -22,14 +22,10 @@ public class Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String fullName;
-	private String userName;
-	private String phoneNumber;
+	private String name;
+	private String familyName;
 	private String email;
-	private String documentNumber;
-	private Boolean hasAtorney;
-	private Boolean hasAdvisor;
-	private Boolean enableSmsEmail;
-	private Boolean enableWhatsapp;
+	private String phoneNumber;
+
 
 }

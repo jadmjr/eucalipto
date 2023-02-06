@@ -8,14 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.eucalipto.cadastro.dto.MovieDTO;
 import com.eucalipto.cadastro.dto.PersonDTO;
-import com.eucalipto.cadastro.dto.ScoreDTO;
-import com.eucalipto.cadastro.entities.Movie;
 import com.eucalipto.cadastro.entities.Person;
-import com.eucalipto.cadastro.entities.Score;
-import com.eucalipto.cadastro.entities.User;
-import com.eucalipto.cadastro.repositories.MovieRepository;
 import com.eucalipto.cadastro.repositories.PersonRepository;
 
 @Service
@@ -51,14 +45,8 @@ public class PersonService {
 
 		person = new Person();
 		person.setEmail(dto.getEmail());
-		person.setDocumentNumber(dto.getDocumentNumber());
-		person.setEnableSmsEmail(dto.getEnableSmsEmail());
-		person.setEnableWhatsapp(dto.getEnableWhatsapp());
-		person.setFullName(dto.getFullName());
-		person.setHasAdvisor(dto.getHasAdvisor());
-		person.setHasAtorney(dto.getHasAtorney());
+		person.setName(dto.getName());
 		person.setPhoneNumber(dto.getPhoneNumber());
-		person.setUserName(dto.getUserName());
 		person = repository.save(person);
 
 		return new PersonDTO(person);
