@@ -2,7 +2,7 @@ package com.eucalipto.cadastro.dto;
 
 public class ScoreDTO {
 	private Long movieId;
-	private String email;
+	private String username;
 	private Double score;
 	
 	public ScoreDTO() {		
@@ -16,12 +16,12 @@ public class ScoreDTO {
 		this.movieId = movieId;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUsername(String email) {
+		this.username = email;
 	}
 
 	public Double getScore() {

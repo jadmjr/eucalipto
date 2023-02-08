@@ -27,10 +27,10 @@ public class ScoreService {
 
 	@Transactional
 	public MovieDTO saveScore(ScoreDTO dto) {
-		User user = userRepository.findByEmail(dto.getEmail());
+		User user = userRepository.findByUsername(dto.getUsername());
 		if (user == null) {
 			user = new User();
-			user.setEmail(dto.getEmail());
+			user.setUsername(dto.getUsername());
 			user = userRepository.saveAndFlush(user);
 		}
 
@@ -53,7 +53,7 @@ public class ScoreService {
 		movie.setCount(movie.getScores().size());
 
 		movie = movieRepository.save(movie);
-		
+
 		return new MovieDTO(movie);
 	}
 
