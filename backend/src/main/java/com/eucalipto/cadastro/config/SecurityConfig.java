@@ -2,7 +2,6 @@ package com.eucalipto.cadastro.config;
 
 import java.util.Arrays;
 
-import org.hibernate.annotations.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -51,7 +50,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.permitAll()
 			.antMatchers("/home")
 			.hasAuthority("USER")
-			.antMatchers("/person")
+			.antMatchers("/admin")
 			.hasAuthority("ADMIN")
 			.anyRequest()
 			.authenticated()
