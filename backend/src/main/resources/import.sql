@@ -1,4 +1,4 @@
-INSERT INTO tb_user(username, password, role) VALUES ('maria@gmail.com', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','ADMIN');
+INSERT INTO tb_user(username, password, role) VALUES ('jadmjr', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','ADMIN');
 INSERT INTO tb_user(username, password, role) VALUES ('joao@gmail.com', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','ADMIN');
 INSERT INTO tb_user(username, password, role) VALUES ('ana@gmail.com', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','USER');
 INSERT INTO tb_user(username, password, role) VALUES ('lucia@gmail.com', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','ADMIN');
