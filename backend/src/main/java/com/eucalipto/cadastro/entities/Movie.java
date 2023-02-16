@@ -2,6 +2,7 @@ package com.eucalipto.cadastro.entities;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

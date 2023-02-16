@@ -8,6 +8,7 @@ INSERT INTO tb_user(username, password, role) VALUES ('joao@gmail.com', '$2a$12$
 INSERT INTO tb_user(username, password, role) VALUES ('ana@gmail.com', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','USER');
 INSERT INTO tb_user(username, password, role) VALUES ('lucia@gmail.com', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','ADMIN');
 INSERT INTO tb_user(username, password, role) VALUES ('joaquim@gmail.com', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','USER');
+INSERT INTO tb_user(username, password, role) VALUES ('user', '$2a$10$78/nr/DOFr0ZRrInkYgz4eeixH6QGfBOA40WrFgHx3Ohwg4fBC80m','USER');
 INSERT INTO tb_movie(score, count, title, image) VALUES (4.5, 2, 'The Witcher', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg');
 INSERT INTO tb_movie(score, count, title, image) VALUES (3.3, 3, 'Venom: Tempo de Carnificina', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/vIgyYkXkg6NC2whRbYjBD7eb3Er.jpg');
 INSERT INTO tb_movie(score, count, title, image) VALUES (0, 0, 'O Espetacular Homem-Aranha 2: A Ameaça de Electro', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/u7SeO6Y42P7VCTWLhpnL96cyOqd.jpg');
