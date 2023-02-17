@@ -1,8 +1,13 @@
-INSERT INTO tb_user(username, password, role) VALUES ('jadmjr', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','ADMIN');
-INSERT INTO tb_user(username, password, role) VALUES ('joao@gmail.com', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','ADMIN');
-INSERT INTO tb_user(username, password, role) VALUES ('ana@gmail.com', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','USER');
-INSERT INTO tb_user(username, password, role) VALUES ('lucia@gmail.com', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','ADMIN');
-INSERT INTO tb_user(username, password, role) VALUES ('joaquim@gmail.com', '$2a$12$ch81Z1BflL7u/SB5YuzyKuLIUWHM2FL8NSqqIDuEsPU7t29jkKV/y','USER');
+--INSERT INTO tb_user(username, password, role) VALUES ('jadmjr', '$2a$10$9iTPAiOTYEC9G9q4hxuieeTfz/voYTtxgPVvi9LSkkC.pK3awD9Na','ADMIN');
+--INSERT INTO tb_user(username, password, role) VALUES ('joao@gmail.com', '$2a$10$9iTPAiOTYEC9G9q4hxuieeTfz/voYTtxgPVvi9LSkkC.pK3awD9Na','ADMIN');
+--INSERT INTO tb_user(username, password, role) VALUES ('ana@gmail.com', '$2a$10$9iTPAiOTYEC9G9q4hxuieeTfz/voYTtxgPVvi9LSkkC.pK3awD9Na','USER');
+--INSERT INTO tb_user(username, password, role) VALUES ('lucia@gmail.com', '$2a$10$9iTPAiOTYEC9G9q4hxuieeTfz/voYTtxgPVvi9LSkkC.pK3awD9Na','ADMIN');
+INSERT INTO tb_user(username, password) VALUES ('a', '$2a$12$MdHHXmN8U/Mu1xhgIPMoBeSYYrxFnhmY9Rd7l.nV4DT5JMI2rsCCe');
+INSERT INTO tb_user(username, password) VALUES ('b', '$2a$12$MdHHXmN8U/Mu1xhgIPMoBeSYYrxFnhmY9Rd7l.nV4DT5JMI2rsCCe');
+INSERT INTO tb_user(username, password) VALUES ('b@gmail.com', '$2a$10$9iTPAiOTYEC9G9q4hxuieeTfz/voYTtxgPVvi9LSkkC.pK3awD9Na');
+INSERT INTO tb_user(username, password) VALUES ('c@gmail.com', '$2a$10$9iTPAiOTYEC9G9q4hxuieeTfz/voYTtxgPVvi9LSkkC.pK3awD9Na');
+INSERT INTO tb_user(username, password) VALUES ('d@gmail.com', '$2a$10$9iTPAiOTYEC9G9q4hxuieeTfz/voYTtxgPVvi9LSkkC.pK3awD9Na');
+INSERT INTO tb_user(username, password) VALUES ('333@gmail.com', '$2a$10$9iTPAiOTYEC9G9q4hxuieeTfz/voYTtxgPVvi9LSkkC.pK3awD9Na');
 INSERT INTO tb_movie(score, count, title, image) VALUES (4.5, 2, 'The Witcher', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg');
 INSERT INTO tb_movie(score, count, title, image) VALUES (3.3, 3, 'Venom: Tempo de Carnificina', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/vIgyYkXkg6NC2whRbYjBD7eb3Er.jpg');
 INSERT INTO tb_movie(score, count, title, image) VALUES (0, 0, 'O Espetacular Homem-Aranha 2: A Ameaça de Electro', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/u7SeO6Y42P7VCTWLhpnL96cyOqd.jpg');
@@ -32,9 +37,15 @@ INSERT INTO tb_movie(score, count, title, image) VALUES (0, 0, 'Interestelar', '
 INSERT INTO tb_movie(score, count, title, image) VALUES (0, 0, 'Contato', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/yFkUPqBuUnbhYbQL8VFpTrAT9za.jpg');
 INSERT INTO tb_movie(score, count, title, image) VALUES (0, 0, 'Duna', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg');
 INSERT INTO tb_movie(score, count, title, image) VALUES (0, 0, 'Aquaman', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/2cUsDz4TzFYHrKktT1bKHHQ7Cgm.jpg');
-
 INSERT INTO tb_score(movie_id, user_id, value) VALUES (1, 1, 5.0);
 INSERT INTO tb_score(movie_id, user_id, value) VALUES (1, 2, 4.0);
 INSERT INTO tb_score(movie_id, user_id, value) VALUES (2, 1, 3.0);
 INSERT INTO tb_score(movie_id, user_id, value) VALUES (2, 2, 3.0);
 INSERT INTO tb_score(movie_id, user_id, value) VALUES (2, 3, 4.0);
+INSERT INTO tb_role (rolename) VALUES('ROLE_ADMIN');
+INSERT INTO tb_role (rolename) VALUES('ROLE_USER');
+INSERT INTO tb_users_roles (user_id, role_id) VALUES(1, 1);
+INSERT INTO tb_users_roles (user_id, role_id) VALUES(2, 2);
+
+
+

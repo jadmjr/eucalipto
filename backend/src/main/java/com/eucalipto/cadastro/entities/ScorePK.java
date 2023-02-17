@@ -18,7 +18,7 @@ public class ScorePK implements Serializable{
 	private Movie movie;
 	@ManyToOne
 	@JoinColumn(name = "user_id")
-	private User user;
+	private UserModel user;
 
 	public ScorePK() {
 	}
@@ -31,11 +31,11 @@ public class ScorePK implements Serializable{
 		this.movie = movie;
 	}
 
-	public User getUser() {
+	public UserModel getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(UserModel user) {
 		this.user = user;
 	}
 
