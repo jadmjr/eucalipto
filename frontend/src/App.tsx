@@ -10,6 +10,7 @@ import RegisterForm from "pages/RegisterForm";
 import Inicial from "pages/Inicial";
 import Cadastro from "pages/Cadastro";
 import Footer from "components/Footer";
+import UserRegistration from "pages/UserRegistration";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Listing />} />
         <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/userRegistration" element={<UserRegistration />} />
         <Route path="/form">
           <Route path=":movieId" element={<Form />} />
         </Route>

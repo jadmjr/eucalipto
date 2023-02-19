@@ -1,6 +1,9 @@
 package com.eucalipto.cadastro.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -8,7 +11,7 @@ import com.eucalipto.cadastro.dto.MovieDTO;
 import com.eucalipto.cadastro.dto.ScoreDTO;
 import com.eucalipto.cadastro.entities.Movie;
 import com.eucalipto.cadastro.entities.Score;
-import com.eucalipto.cadastro.entities.User;
+import com.eucalipto.cadastro.entities.UserModel;
 import com.eucalipto.cadastro.repositories.MovieRepository;
 import com.eucalipto.cadastro.repositories.ScoreRepository;
 import com.eucalipto.cadastro.repositories.UserRepository;
@@ -26,10 +29,11 @@ public class ScoreService {
 	private UserRepository userRepository;
 
 	@Transactional
-	public MovieDTO saveScore(ScoreDTO dto) {
-		User user = userRepository.findByUsername(dto.getUsername());
+	public ResponseEntity<Score> saveScore(ScoreDTO dto) {
+		UserModel user = userRepository.findByUsername(dto.getUsername())
+				.orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + dto.getUsername()));
 		if (user == null) {
-			user = new User();
+			user = new UserModel();
 			user.setUsername(dto.getUsername());
 			user = userRepository.saveAndFlush(user);
 		}
@@ -54,7 +58,8 @@ public class ScoreService {
 
 		movie = movieRepository.save(movie);
 
-		return new MovieDTO(movie);
+		return new ResponseEntity<>(HttpStatus.CREATED);
+
 	}
 
 }

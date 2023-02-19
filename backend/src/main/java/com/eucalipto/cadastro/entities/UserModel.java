@@ -1,46 +1,49 @@
 package com.eucalipto.cadastro.entities;
 
+import java.io.Serializable;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Component;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CustomUserDetails implements UserDetails {
+@Entity
+@Table(name = "tb_user")
+public class UserModel implements UserDetails, Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
- 	private User user;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@Column(nullable = false, unique = true)
+	private String username;
+	private String password;
+	@ManyToMany
+	@JoinTable(name = "TB_USERS_ROLES", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+	private List<Role> roles;
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		Collections.singleton(new SimpleGrantedAuthority(user.getRole()));
-		return null;
-	}
-
-	@Override
-	public String getPassword() {
-		return user.getPassword();
-	}
-
-	@Override
-	public String getUsername() {
-		return user.getUsername();
+		// TODO Auto-generated method stub
+		return this.roles;
 	}
 
 	@Override

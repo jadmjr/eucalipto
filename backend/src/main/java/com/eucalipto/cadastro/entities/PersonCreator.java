@@ -16,14 +16,17 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "tb_user")
-public class User {
+@Table(name = "tb_person")
+public class PersonCreator {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String username;
+	private String name;
+	private String familyName;
+	private String email;
+	private String phoneNumber;
 	private String password;
-	private String role;
+
 
 }
