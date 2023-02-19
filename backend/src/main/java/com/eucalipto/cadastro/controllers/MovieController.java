@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.eucalipto.cadastro.dto.MovieDTO;
 import com.eucalipto.cadastro.entities.Movie;
-import com.eucalipto.cadastro.entities.Person;
 import com.eucalipto.cadastro.services.MovieService;
 
 @RestController
