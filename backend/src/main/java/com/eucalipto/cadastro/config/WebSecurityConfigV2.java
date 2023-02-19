@@ -2,6 +2,7 @@ package com.eucalipto.cadastro.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -15,10 +16,10 @@ public class WebSecurityConfigV2 {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.httpBasic().and().authorizeHttpRequests()
-				// .antMatchers(HttpMethod.GET, "/movies/**").permitAll()
+//				 /.antMatchers(HttpMethod.PUT, "/scores").permitAll()
 				// .antMatchers(HttpMethod.POST, "/movies").hasRole("USER")
 				// .antMatchers(HttpMethod.DELETE, "/movies/**").hasRole("ADMIN")
-				.anyRequest().authenticated().and().csrf().disable();
+				.anyRequest().permitAll().and().csrf().disable();
 		return http.build();
 	}
 

@@ -24,25 +24,21 @@ public class MovieController {
 	@Autowired
 	private MovieService service;
 
-	@PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
 	@GetMapping
 	public Page<MovieDTO> findAll(Pageable pageable) {
 		return service.findAll(pageable);
 	}
 
-	@PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
 	@GetMapping(value = "/{id}")
 	public MovieDTO findById(@PathVariable Long id) {
 		return service.findById(id);
 	}
 
-	@PreAuthorize("hasRole('ADMIN')")
 	@PostMapping
 	public ResponseEntity<Movie> create(@RequestBody Movie movie) {
 		return service.saveMovie(movie);
 	}
 
-	@PreAuthorize("hasRole('ADMIN')")
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Movie> delete(@PathVariable Long id) {
 		return service.delete(id);

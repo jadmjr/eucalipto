@@ -4,8 +4,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.eucalipto.cadastro.entities.Role;
+import com.eucalipto.cadastro.enums.Rolename;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {
-	//Optional<Role> findByRoleName(String rolename);
+	Role findByrolename(Rolename rolename);
 }

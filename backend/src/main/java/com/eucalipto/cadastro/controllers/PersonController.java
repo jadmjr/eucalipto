@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +21,8 @@ import com.eucalipto.cadastro.services.PersonService;
 public class PersonController {
 	@Autowired
 	private PersonService service;
-
+	
+	@PreAuthorize("hasRole('ADMIN')")
 	@GetMapping
 	public Page<PersonDTO> findAll(Pageable pageable) {
 		return service.findAll(pageable);

@@ -32,7 +32,7 @@ function FormCard({ movieId }: Props) {
             method: 'PUT',
             url: '/scores',
             data: {
-                email: email,
+                username: email,
                 movieId: movieId,
                 score: score
             }

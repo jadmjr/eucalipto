@@ -1,3 +1,4 @@
+
 package com.eucalipto.cadastro.config;
 
 import javax.transaction.Transactional;
@@ -12,9 +13,10 @@ import com.eucalipto.cadastro.entities.UserModel;
 import com.eucalipto.cadastro.repositories.UserRepository;
 
 @Service
+
 @Transactional
 public class UserDetailsServiceImpl implements UserDetailsService {
-	
+
 	final UserRepository repository;
 
 	public UserDetailsServiceImpl(UserRepository repository) {
