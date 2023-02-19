@@ -10,5 +10,7 @@ public class HomeController {
 	public String home() {
 		return "Bem vindo ao Eucalipto";
 	}
+	
+	
 
 }
