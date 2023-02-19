@@ -11,8 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class CadastroApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CadastroApplication.class, args);
-		System.out.println(new BCryptPasswordEncoder().encode("123"));
+		SpringApplication.run(CadastroApplication.class, args);		
 	}
 
 	@Bean
